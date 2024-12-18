@@ -130,6 +130,10 @@ class CausalDiagram:
                 self.u_pas[v].add(u)
         self.u_pas = defaultdict(set, {v: frozenset(us) for v, us in self.u_pas.items()})
 
+    # added for pickling in joblib
+    def __reduce__(self):
+        return (self.__class__, (self.V, self.edges, self.confounded_to_3tuples()))
+
     def UCs(self, v):
         return self.u_pas[v]
 
@@ -435,6 +439,10 @@ class StructuralCausalModel:
 
         self.query00 = functools.lru_cache(1024)(self.query00)
 
+    # added for pickling in joblib
+    def __reduce__(self):
+        return (self.__class__, (self.G, self.F, self.P_U, self.D, self.more_U))
+
     def query(self, outcome: Tuple, condition: dict = None, intervention: dict = None, verbose=False) -> defaultdict:
         if condition is None:
             condition = dict()
@@ -533,3 +541,6 @@ def cd2qcd(G: CausalDiagram) -> str:
         bipaths = [''.join(path) for path in bipaths]
 
     return f'qcd({paths}, {bipaths})'
+
+CD = CausalDiagram
+SCM = StructuralCausalModel

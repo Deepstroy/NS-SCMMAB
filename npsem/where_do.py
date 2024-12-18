@@ -91,3 +91,28 @@ def subPOMISs(G: CausalDiagram, Y, Ws: List, obs=None) -> Set[FrozenSet[str]]:
 def minimal_do(G: CausalDiagram, Y: str, Xs: AbstractSet[str]) -> FrozenSet[str]:
     """ Non-redundant subset of Xs that entail the same E[Y|do(Xs)] """
     return frozenset(Xs & G.do(Xs).An(Y))
+
+
+def POMISs_MUCT(G: CausalDiagram, Y: str) -> Set[Tuple[FrozenSet[str], FrozenSet[str]]]:
+    """ all POMISs for G with respect to Y and their corresponding MUCTs """
+    G = G[G.An(Y)]
+
+    Ts, Xs = MUCT_IB(G, Y)
+    H = G.do(Xs)[Ts | Xs]
+    return subPOMISs_MUCT(H, Y, only(H.causal_order(backward=True), Ts - {Y})) | {(frozenset(Xs), Ts)}
+
+
+def subPOMISs_MUCT(G: CausalDiagram, Y, Ws: List, obs=None) -> Set[Tuple[FrozenSet[str], FrozenSet[str]]]:
+    if obs is None:
+        obs = set()
+
+    out = []
+    for i, W_i in enumerate(Ws):
+        Ts_i, Xs = MUCT_IB(G.do({W_i}), Y)
+        new_obs = obs | set(Ws[:i])
+        if not (Xs & new_obs):
+            out.append((frozenset(Xs), Ts_i))  # Append POMIS with its MUCT
+            new_Ws = only(Ws[i + 1:], Ts_i)
+            if new_Ws:
+                out.extend(subPOMISs_MUCT(G.do(Xs)[Ts_i | Xs], Y, new_Ws, new_obs))
+    return set(out)
