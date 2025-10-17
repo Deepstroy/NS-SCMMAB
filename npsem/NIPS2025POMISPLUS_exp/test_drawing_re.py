@@ -133,7 +133,7 @@ def aggregate_plot():
 
 
 if __name__ == '__main__':
-    absolute_path = '../../'  # npsem/NIPS2025POMISPLUS_exp 기준
+    absolute_path = '../../'
 
     aggregate_plot()
 
