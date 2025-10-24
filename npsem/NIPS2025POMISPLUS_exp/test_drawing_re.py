@@ -38,7 +38,6 @@ def naked_MAB_regret_plot(axes: Axes, xs_dict, cut_time, band_alpha=0.1, legend=
     if legend:
         axes.legend(loc=2, frameon=False)
     if not hide_ylabel:
-        # axes.set_ylabel('Cum. Regret')
         axes.set_ylabel('Cumulative\nRegret')
         axes.get_yaxis().set_label_coords(-0.17, 0.5) #-0.15
     if adjust_ymax != 1:
@@ -171,6 +170,6 @@ if __name__ == '__main__':
 
     aggregate_plot()
 
-    # print_final_bands(absolute_path + 'bandit_results/X0toY2_0', round_t=100000, ci_scale=1.96)
-    # print_final_bands(absolute_path + 'bandit_results/WttoYtprime_0', round_t=100000, ci_scale=1.96)
-    # print_final_bands(absolute_path + 'bandit_results/W0toY2_0', round_t=100000, ci_scale=1.96)
+    print_final_bands(absolute_path + 'bandit_results/X0toY2_0', round_t=100000, ci_scale=1.96)
+    print_final_bands(absolute_path + 'bandit_results/WttoYtprime_0', round_t=100000, ci_scale=1.96)
+    print_final_bands(absolute_path + 'bandit_results/W0toY2_0', round_t=100000, ci_scale=1.96)
