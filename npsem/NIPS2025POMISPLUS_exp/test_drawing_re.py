@@ -38,8 +38,9 @@ def naked_MAB_regret_plot(axes: Axes, xs_dict, cut_time, band_alpha=0.1, legend=
     if legend:
         axes.legend(loc=2, frameon=False)
     if not hide_ylabel:
-        axes.set_ylabel('Cum. Regret')
-        axes.get_yaxis().set_label_coords(-0.15, 0.5)
+        # axes.set_ylabel('Cum. Regret')
+        axes.set_ylabel('Cumulative\nRegret')
+        axes.get_yaxis().set_label_coords(-0.17, 0.5) #-0.15
     if adjust_ymax != 1:
         ymin, ymax = axes.get_ylim()
         axes.set_ylim(ymin, ymax * adjust_ymax)
@@ -59,7 +60,7 @@ def naked_MAB_optimal_probability_plot(axes: Axes, arm_freqs, cut_time, legend=F
     axes.set_xlabel('Trials')
     if not hide_ylabel:
         axes.set_ylabel('Probability')
-        axes.get_yaxis().set_label_coords(-0.15, 0.5)
+        axes.get_yaxis().set_label_coords(-0.2, 0.5)
     axes.set_yticks([0, 0.5, 1.0])
     if hide_yticklabels:
         axes.set_yticklabels([])
@@ -95,7 +96,7 @@ def aggregate_plot():
         "Task 3": (absolute_path + 'bandit_results/W0toY2_0', 100000)
     }
 
-    # info dict 구성
+    # info dict
     info = {k: dict(zip(['directory', 'cut_time'], v)) for k, v in info__.items()}
     results = {task_name: dict(zip(['CR', 'OAP'], data_prep(task_info['directory']))) for task_name, task_info in info.items()}
     plot_funcs = {'CR': naked_MAB_regret_plot, 'OAP': naked_MAB_optimal_probability_plot}
@@ -117,7 +118,6 @@ def aggregate_plot():
                                       hide_yticklabels=False,
                                       adjust_ymax=1)
                 if row_id == 1:
-                    # Only place task label below bottom row
                     current_axes.text(0.5, -0.45, f"({chr(97 + col_id)}) {task_name}",
                                       transform=current_axes.transAxes,
                                       ha='center', va='top', fontsize=10, family='serif')
@@ -131,9 +131,46 @@ def aggregate_plot():
     plt.show()
 
 
+def print_final_bands(directory, round_t=None, ci_scale=1.96):
+    _, mu, results = load_result(directory)
+
+    print(f"\n=== Final ±95% CI @ {directory} ===")
+    for (arm_strategy, bandit_algo), (arm_played, rewards) in results.items():
+        name = f"{arm_strategy} ({bandit_algo})"
+
+        # --- Cum.Regret ---
+        cr_matrix = compute_cumulative_regret(arm_played, mu)
+        T = cr_matrix.shape[1]
+        t_final = (round_t if round_t is not None else T)
+        t_final = min(t_final, T)
+        cr_last = cr_matrix[:, t_final-1]
+
+        n_trials = len(cr_last)
+        cr_mean = np.mean(cr_last)
+        cr_sd   = np.std(cr_last, ddof=1)
+        cr_se   = cr_sd / np.sqrt(n_trials)
+        cr_pm   = ci_scale * cr_se
+
+        # --- OAP ---
+        opt_matrix = compute_optimality(arm_played, mu).astype(float)
+        oap_last = opt_matrix[:, t_final-1]
+        n_trials_oap = len(oap_last)
+        oap_mean = np.mean(oap_last)
+        oap_sd   = np.std(oap_last, ddof=1)
+        oap_se   = oap_sd / np.sqrt(n_trials_oap)
+        oap_pm   = ci_scale * oap_se
+
+        # --- print ± form ---
+        print(f"{name:16s} | CR: {cr_mean:8.3f} ± {cr_pm:7.3f}"
+              f"   | OAP: {100*oap_mean:6.2f}% ± {100*oap_pm:5.2f}%")
+
+
 
 if __name__ == '__main__':
     absolute_path = '../../'
 
     aggregate_plot()
 
+    # print_final_bands(absolute_path + 'bandit_results/X0toY2_0', round_t=100000, ci_scale=1.96)
+    # print_final_bands(absolute_path + 'bandit_results/WttoYtprime_0', round_t=100000, ci_scale=1.96)
+    # print_final_bands(absolute_path + 'bandit_results/W0toY2_0', round_t=100000, ci_scale=1.96)

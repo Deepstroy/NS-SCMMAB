@@ -256,7 +256,6 @@ def WttoYtprime(devised=True, seed=None):
                                       'U_W0', 'U_W1',
 
                                       'U_X0Y0', 'U_X1Y1'
-
                                   })
         return M, mu1
 
