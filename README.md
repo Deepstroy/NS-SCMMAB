@@ -3,7 +3,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paper](https://img.shields.io/badge/Paper-NeurIPS%202025-red)](https://openreview.net/pdf?id=F4LhOqhxkk)
-[![Conference](https://img.shields.io/badge/Poster-NeurIPS%202025-blue)](https://neurips.cc/virtual/2025/loc/san-diego/poster/119070)
+[![Conference](https://img.shields.io/badge/Poster-NeurIPS%202025-blue)](https://neurips.cc/media/PosterPDFs/NeurIPS%202025/119070.png?t=1763529959.1211314)
 [![Blog Post](https://img.shields.io/badge/Blog-Explainer-green)](https://yeahoon-k.github.io/ns-scb-explainer/)
 
 - **Authors:** Yeahoon Kwon, Yesong Choe, Soungmin Park, Neil Dhir, Sanghack Lee
