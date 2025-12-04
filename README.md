@@ -3,7 +3,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paper](https://img.shields.io/badge/Paper-NeurIPS%202025-red)](https://openreview.net/pdf?id=F4LhOqhxkk)
-[![Conference](https://img.shields.io/badge/NeurIPS%202025-Poster-blue)](https://neurips.cc/virtual/2025/loc/san-diego/poster/119070)
+[![Conference](https://img.shields.io/badge/Poster-NeurIPS%202025-blue)](https://neurips.cc/virtual/2025/loc/san-diego/poster/119070)
 [![Blog Post](https://img.shields.io/badge/Blog-Explainer-green)](https://yeahoon-k.github.io/ns-scb-explainer/)
 
 - **Authors:** Yeahoon Kwon, Yesong Choe, Soungmin Park, Neil Dhir, Sanghack Lee
@@ -21,21 +21,6 @@
 - **Non-Myopic Intervention Strategies**: Identifies intervention sequences that maximize both immediate and long-term rewards through POMIS+ (Possibly-Optimal Minimal Intervention Sets with Future Support)
 - **Graphical Causal Tools**: Provides graphical characterization and algorithms for identifying optimal intervention strategies in non-stationary environments
 - **Comprehensive Experiments**: Includes all code to reproduce the experimental results from the NeurIPS 2025 paper
-
-### Why NS-SCMMAB?
-
-Traditional structural causal bandits assume static environments where the causal structure and reward distributions remain fixed. However, many real-world applications—such as healthcare, education, and adaptive systems—involve environments where:
-
-1. **Causal mechanisms evolve** due to temporal dependencies
-2. **Past interventions influence future rewards** through information propagation
-3. **Myopic strategies fail** by overlooking long-term causal effects
-
-NS-SCMMAB addresses these challenges by:
-- Capturing temporal dynamics through rolled-out causal graphs
-- Identifying variables that maximize cumulative rewards across time steps
-- Providing theoretical guarantees for non-myopic intervention strategies
-
-**For a gentle introduction to these concepts, check out our [interactive blog post explainer](https://yeahoon-k.github.io/ns-scb-explainer/).**
 
 ## Installation
 
@@ -157,36 +142,6 @@ plt.show()
 ```
 
 For more detailed examples, see the [examples/](examples/) directory and the [Experiments](#experiments) section below.
-
-
-## Core Concepts
-
-### 1. Non-Stationary SCM-MAB
-
-Unlike stationary bandits where reward distributions are fixed, **NS-SCM-MAB** models environments where:
-- The reward distribution P(Y_t | do(X_t)) changes over time
-- Changes are driven by **information propagation** from past interventions
-- Each time step has a **temporal model** conditioned on predetermined values from previous steps
-
-### 2. POMIS+ (POMIS with Future Support)
-
-**POMIS+** extends the classical POMIS (Possibly-Optimal Minimal Intervention Sets) to capture both immediate and long-term rewards:
-
-- **IB+** (Interventional Border for Future Time Steps): Variables at time t that influence future rewards Y_{t'}
-- **QIB** (Qualified Interventional Border): Variables that optimize the current reward Y_t without blocking future effects
-
-**Mathematical Definition:**
-POMIS+_{t,t'} = IB+_{t,t'}(G, Y_{t'}) ∪ QIB_t(G, Y_t)
-
-This composition ensures that interventions optimize both current and future outcomes.
-
-### 3. Information Propagation
-
-In non-stationary environments, actions at time t can affect rewards at time t' > t through:
-- **Transition edges**: Direct causal paths across time (e.g., X_t → X_{t+1})
-- **Dynamic unobserved confounders (DUCs)**: Hidden variables that create temporal dependencies
-
-Our framework explicitly models these temporal causal pathways.
 
 ## Experiments
 
