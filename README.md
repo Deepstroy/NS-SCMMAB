@@ -141,8 +141,6 @@ plt.grid(True, alpha=0.3)
 plt.show()
 ```
 
-For more detailed examples, see the [examples/](examples/) directory and the [Experiments](#experiments) section below.
-
 ## Experiments
 
 To reproduce the experiments from the NeurIPS 2025 paper:
