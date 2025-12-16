@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fbdd0415-01ee-4b0b-adb8-ace81c500d3f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rsUuoe21zG4ByvRGI7M5nt3fQc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.analyze.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bandits.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.pomis_plus.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.scm_bandits.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.scm_examples.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_bandit_strategies.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.test_drawing_re (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_drawing_re.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_nsbandit_strategies.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/yeahoon/NS-SCMMAB-NIPS2025&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
+    <layout>
+      <window_info id="Bookmarks" side_tool="true" />
+      <window_info id="Merge Requests" />
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Pull Requests" />
+      <window_info id="Learn" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24392858" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="HfCacheToolWindow" />
+      <window_info anchor="bottom" id="File Transfer" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.3289612" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.24219537" />
+      <window_info anchor="bottom" id="Services" order="4" weight="0.3296646" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.3289612" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.3268625" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3296646" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3268625" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3268625" />
+      <window_info anchor="right" id="Endpoints" />
+      <window_info anchor="right" id="Hierarchy" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="Plots" order="5" weight="0.3943805" />
+    </layout>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bandit_results/W0toY2_0" />
+      <recent name="$PROJECT_DIR$/bandit_results/X0toY2_0" />
+      <recent name="$PROJECT_DIR$/bandit_results" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bandit_results" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test_drawing_re (1)">
+    <configuration name="report_cum_regret_oap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SCMMAB-NIPS2018" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp/report_cum_regret_oap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scm_examples" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SCMMAB-NIPS2018" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp/scm_examples.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_drawing_re (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SCMMAB-NIPS2018" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/npsem/NIPS2025POMISPLUS_exp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/npsem/NIPS2025POMISPLUS_exp/test_drawing_re.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_drawing_re" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SCMMAB-NIPS2018" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp/test_drawing_re.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_nsbandit_strategies" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SCMMAB-NIPS2018" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/npsem/NIPS2025POMISPLUS_exp/test_nsbandit_strategies.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test_drawing_re (1)" />
+      <item itemvalue="Python.report_cum_regret_oap" />
+      <item itemvalue="Python.scm_examples" />
+      <item itemvalue="Python.test_drawing_re" />
+      <item itemvalue="Python.test_nsbandit_strategies" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_drawing_re (1)" />
+        <item itemvalue="Python.test_nsbandit_strategies" />
+        <item itemvalue="Python.test_drawing_re" />
+        <item itemvalue="Python.report_cum_regret_oap" />
+        <item itemvalue="Python.scm_examples" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbdd0415-01ee-4b0b-adb8-ace81c500d3f" name="Changes" comment="" />
+      <created>1737347501694</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737347501694</updated>
+      <workItem from="1737347502821" duration="27420000" />
+      <workItem from="1744003643672" duration="38000" />
+      <workItem from="1744010153034" duration="10682000" />
+      <workItem from="1744092653467" duration="3493000" />
+      <workItem from="1744096664658" duration="5374000" />
+      <workItem from="1744122486977" duration="9000" />
+      <workItem from="1744122577123" duration="7000" />
+      <workItem from="1744124060950" duration="4207000" />
+      <workItem from="1744172066063" duration="23342000" />
+      <workItem from="1744206653210" duration="13062000" />
+      <workItem from="1744258961530" duration="12480000" />
+      <workItem from="1744273679401" duration="1687000" />
+      <workItem from="1744275389428" duration="230000" />
+      <workItem from="1744275644375" duration="1751000" />
+      <workItem from="1744279724089" duration="714000" />
+      <workItem from="1744280469420" duration="3834000" />
+      <workItem from="1744296234270" duration="4894000" />
+      <workItem from="1744301401664" duration="190000" />
+      <workItem from="1744301615058" duration="357000" />
+      <workItem from="1744301986694" duration="833000" />
+      <workItem from="1744302949229" duration="7105000" />
+      <workItem from="1744344386152" duration="1035000" />
+      <workItem from="1744345458636" duration="219000" />
+      <workItem from="1744345700106" duration="1106000" />
+      <workItem from="1744346832225" duration="288000" />
+      <workItem from="1744347149834" duration="1506000" />
+      <workItem from="1744348786762" duration="8516000" />
+      <workItem from="1744361155087" duration="240000" />
+      <workItem from="1744361428731" duration="2146000" />
+      <workItem from="1744372567109" duration="5903000" />
+      <workItem from="1744427542426" duration="42206000" />
+      <workItem from="1744601248833" duration="5677000" />
+      <workItem from="1744640827474" duration="9000" />
+      <workItem from="1744640907095" duration="7618000" />
+      <workItem from="1744787282762" duration="2437000" />
+      <workItem from="1744945528445" duration="998000" />
+      <workItem from="1744958852712" duration="1477000" />
+      <workItem from="1746074166556" duration="6635000" />
+      <workItem from="1747112022478" duration="3351000" />
+      <workItem from="1747125909889" duration="599000" />
+      <workItem from="1747134454354" duration="2389000" />
+      <workItem from="1747289192673" duration="1204000" />
+      <workItem from="1747385889530" duration="599000" />
+      <workItem from="1747764581242" duration="1023000" />
+      <workItem from="1747887468649" duration="17516000" />
+      <workItem from="1747987981633" duration="136000" />
+      <workItem from="1747988118548" duration="83000" />
+      <workItem from="1747988344709" duration="176000" />
+      <workItem from="1747988590619" duration="4289000" />
+      <workItem from="1752037995067" duration="31000" />
+      <workItem from="1760692520807" duration="37674000" />
+      <workItem from="1761809656674" duration="16727000" />
+      <workItem from="1763017747351" duration="6406000" />
+      <workItem from="1765776844295" duration="1961000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/npsem/NIPS2018POMIS_exp/test_nsbandit_strategies.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="subseq(mu, arm_selected)" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$test_drawing_re.coverage" NAME="test_drawing_re Coverage Results" MODIFIED="1747909184714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$pomis_plus.coverage" NAME="pomis_plus Coverage Results" MODIFIED="1744201529027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$analyze.coverage" NAME="analyze Coverage Results" MODIFIED="1744362727472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bandit_results/X0toY2_0" />
+    <SUITE FILE_PATH="coverage/NS_SCMMAB_NIPS2025$test_drawing_re__1_.coverage" NAME="test_drawing_re (1) Coverage Results" MODIFIED="1761125346780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem/NIPS2025POMISPLUS_exp" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$test_bandit_strategies.coverage" NAME="test_bandit_strategies Coverage Results" MODIFIED="1744187996027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$scm_examples.coverage" NAME="scm_examples Coverage Results" MODIFIED="1744547558844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+    <SUITE FILE_PATH="coverage/NS_SCMMAB_NIPS2025$test_nsbandit_strategies.coverage" NAME="test_nsbandit_strategies Coverage Results" MODIFIED="1760942744999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$scm_bandits.coverage" NAME="scm_bandits Coverage Results" MODIFIED="1744206331352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$test_nsbandit_strategies.coverage" NAME="test_nsbandit_strategies Coverage Results" MODIFIED="1747910586325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem/NIPS2018POMIS_exp" />
+    <SUITE FILE_PATH="coverage/SCMMAB_NIPS2018$bandits.coverage" NAME="bandits Coverage Results" MODIFIED="1744096568836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/npsem" />
+  </component>
+</project>

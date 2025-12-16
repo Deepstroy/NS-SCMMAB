@@ -48,98 +48,168 @@ This will automatically install all required dependencies:
 - `seaborn >= 0.11.2`
 - `tqdm >= 4.62.0`
 
+[//]: # ()
+[//]: # (## Getting Started)
 
-## Getting Started
+[//]: # ()
+[//]: # (Here's a simple example to get you started with NS-SCMMAB:)
 
-Here's a simple example to get you started with NS-SCMMAB:
+[//]: # ()
+[//]: # (### Basic Example: Simple Non-Stationary Environment)
 
-### Basic Example: Simple Non-Stationary Environment
+[//]: # ()
+[//]: # (```python)
 
-```python
-import numpy as np
-from src.model import CausalDiagram, StructuralCausalModel
-from src.pomis_plus import POMISplusSEQ
-from src.bandits import ThompsonSamplingBandit
+[//]: # (import numpy as np)
 
-# Define a simple non-stationary causal structure
-# Time step 1: X1 -> Z1 -> Y1
-# Time step 2: X2 -> Z2 -> Y2, with X1 -> X2 (temporal dependency)
+[//]: # (from src.model import CausalDiagram, StructuralCausalModel)
 
-# Create causal diagram
-cd = CausalDiagram()
-cd.add_edges([
-    ('X1', 'Z1'), ('Z1', 'Y1'),  # Time step 1
-    ('X2', 'Z2'), ('Z2', 'Y2'),  # Time step 2
-    ('X1', 'X2')                  # Temporal edge
-])
+[//]: # (from src.pomis_plus import POMISplusSEQ)
 
-# Define structural equations
-def f_X1(u): return u['U_X1']
-def f_Z1(x1, u): return (x1 + u['U_Z1']) % 2
-def f_Y1(z1, u): return (z1 + u['U_Y1']) % 2
+[//]: # (from src.bandits import ThompsonSamplingBandit)
 
-def f_X2(x1, u): return (x1 + u['U_X2']) % 2
-def f_Z2(x2, u): return (x2 + u['U_Z2']) % 2
-def f_Y2(z2, u): return (z2 + u['U_Y2']) % 2
+[//]: # ()
+[//]: # (# Define a simple non-stationary causal structure)
 
-# Define exogenous distributions
-P_U = {
-    'U_X1': 0.5, 'U_Z1': 0.2, 'U_Y1': 0.1,
-    'U_X2': 0.3, 'U_Z2': 0.2, 'U_Y2': 0.1
-}
+[//]: # (# Time step 1: X1 -> Z1 -> Y1)
 
-# Create SCM
-scm = StructuralCausalModel(
-    graph=cd,
-    functions={'X1': f_X1, 'Z1': f_Z1, 'Y1': f_Y1,
-               'X2': f_X2, 'Z2': f_Z2, 'Y2': f_Y2},
-    exogenous_dist=P_U
-)
+[//]: # (# Time step 2: X2 -> Z2 -> Y2, with X1 -> X2 &#40;temporal dependency&#41;)
 
-# Compute POMIS+ sequences
-reward_vars = ['Y1', 'Y2']
-pomis_plus_sequences = POMISplusSEQ(cd, reward_vars, time_horizon=2)
+[//]: # ()
+[//]: # (# Create causal diagram)
 
-print("POMIS+ Intervention Sequences:")
-for i, seq in enumerate(pomis_plus_sequences, 1):
-    print(f"Sequence {i}: {seq}")
-```
+[//]: # (cd = CausalDiagram&#40;&#41;)
 
-### Running a Bandit Experiment
+[//]: # (cd.add_edges&#40;[)
 
-```python
-from src.scm_bandits import SCMBandit
-from src.bandits import ThompsonSamplingBandit
+[//]: # (    &#40;'X1', 'Z1'&#41;, &#40;'Z1', 'Y1'&#41;,  # Time step 1)
 
-# Create a bandit problem from the SCM
-bandit = SCMBandit(scm, reward_vars=['Y1', 'Y2'])
+[//]: # (    &#40;'X2', 'Z2'&#41;, &#40;'Z2', 'Y2'&#41;,  # Time step 2)
 
-# Initialize Thompson Sampling
-ts = ThompsonSamplingBandit(
-    intervention_sequences=pomis_plus_sequences,
-    n_trials=10000
-)
+[//]: # (    &#40;'X1', 'X2'&#41;                  # Temporal edge)
 
-# Run the bandit algorithm
-cumulative_regret = ts.run(bandit)
+[//]: # (]&#41;)
 
-print(f"Final cumulative regret: {cumulative_regret[-1]:.2f}")
-```
+[//]: # ()
+[//]: # (# Define structural equations)
 
-### Visualizing Results
+[//]: # (def f_X1&#40;u&#41;: return u['U_X1'])
 
-```python
-import matplotlib.pyplot as plt
+[//]: # (def f_Z1&#40;x1, u&#41;: return &#40;x1 + u['U_Z1']&#41; % 2)
 
-plt.figure(figsize=(10, 6))
-plt.plot(cumulative_regret, label='Thompson Sampling with POMIS+')
-plt.xlabel('Trials')
-plt.ylabel('Cumulative Regret')
-plt.title('Performance on Non-Stationary Causal Bandit')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.show()
-```
+[//]: # (def f_Y1&#40;z1, u&#41;: return &#40;z1 + u['U_Y1']&#41; % 2)
+
+[//]: # ()
+[//]: # (def f_X2&#40;x1, u&#41;: return &#40;x1 + u['U_X2']&#41; % 2)
+
+[//]: # (def f_Z2&#40;x2, u&#41;: return &#40;x2 + u['U_Z2']&#41; % 2)
+
+[//]: # (def f_Y2&#40;z2, u&#41;: return &#40;z2 + u['U_Y2']&#41; % 2)
+
+[//]: # ()
+[//]: # (# Define exogenous distributions)
+
+[//]: # (P_U = {)
+
+[//]: # (    'U_X1': 0.5, 'U_Z1': 0.2, 'U_Y1': 0.1,)
+
+[//]: # (    'U_X2': 0.3, 'U_Z2': 0.2, 'U_Y2': 0.1)
+
+[//]: # (})
+
+[//]: # ()
+[//]: # (# Create SCM)
+
+[//]: # (scm = StructuralCausalModel&#40;)
+
+[//]: # (    graph=cd,)
+
+[//]: # (    functions={'X1': f_X1, 'Z1': f_Z1, 'Y1': f_Y1,)
+
+[//]: # (               'X2': f_X2, 'Z2': f_Z2, 'Y2': f_Y2},)
+
+[//]: # (    exogenous_dist=P_U)
+
+[//]: # (&#41;)
+
+[//]: # ()
+[//]: # (# Compute POMIS+ sequences)
+
+[//]: # (reward_vars = ['Y1', 'Y2'])
+
+[//]: # (pomis_plus_sequences = POMISplusSEQ&#40;cd, reward_vars, time_horizon=2&#41;)
+
+[//]: # ()
+[//]: # (print&#40;"POMIS+ Intervention Sequences:"&#41;)
+
+[//]: # (for i, seq in enumerate&#40;pomis_plus_sequences, 1&#41;:)
+
+[//]: # (    print&#40;f"Sequence {i}: {seq}"&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### Running a Bandit Experiment)
+
+[//]: # ()
+[//]: # (```python)
+
+[//]: # (from src.scm_bandits import SCMBandit)
+
+[//]: # (from src.bandits import ThompsonSamplingBandit)
+
+[//]: # ()
+[//]: # (# Create a bandit problem from the SCM)
+
+[//]: # (bandit = SCMBandit&#40;scm, reward_vars=['Y1', 'Y2']&#41;)
+
+[//]: # ()
+[//]: # (# Initialize Thompson Sampling)
+
+[//]: # (ts = ThompsonSamplingBandit&#40;)
+
+[//]: # (    intervention_sequences=pomis_plus_sequences,)
+
+[//]: # (    n_trials=10000)
+
+[//]: # (&#41;)
+
+[//]: # ()
+[//]: # (# Run the bandit algorithm)
+
+[//]: # (cumulative_regret = ts.run&#40;bandit&#41;)
+
+[//]: # ()
+[//]: # (print&#40;f"Final cumulative regret: {cumulative_regret[-1]:.2f}"&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### Visualizing Results)
+
+[//]: # ()
+[//]: # (```python)
+
+[//]: # (import matplotlib.pyplot as plt)
+
+[//]: # ()
+[//]: # (plt.figure&#40;figsize=&#40;10, 6&#41;&#41;)
+
+[//]: # (plt.plot&#40;cumulative_regret, label='Thompson Sampling with POMIS+'&#41;)
+
+[//]: # (plt.xlabel&#40;'Trials'&#41;)
+
+[//]: # (plt.ylabel&#40;'Cumulative Regret'&#41;)
+
+[//]: # (plt.title&#40;'Performance on Non-Stationary Causal Bandit'&#41;)
+
+[//]: # (plt.legend&#40;&#41;)
+
+[//]: # (plt.grid&#40;True, alpha=0.3&#41;)
+
+[//]: # (plt.show&#40;&#41;)
+
+[//]: # (```)
 
 ## Experiments
 
