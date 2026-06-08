@@ -62,11 +62,11 @@ This will automatically install all required dependencies:
 
 [//]: # (import numpy as np)
 
-[//]: # (from src.model import CausalDiagram, StructuralCausalModel)
+[//]: # (from npsem.model import CausalDiagram, StructuralCausalModel)
 
-[//]: # (from src.pomis_plus import POMISplusSEQ)
+[//]: # (from npsem.pomis_plus import POMISplusSEQ)
 
-[//]: # (from src.bandits import ThompsonSamplingBandit)
+[//]: # (from npsem.bandits import ThompsonSamplingBandit)
 
 [//]: # ()
 [//]: # (# Define a simple non-stationary causal structure)
@@ -154,9 +154,9 @@ This will automatically install all required dependencies:
 [//]: # ()
 [//]: # (```python)
 
-[//]: # (from src.scm_bandits import SCMBandit)
+[//]: # (from npsem.scm_bandits import SCMBandit)
 
-[//]: # (from src.bandits import ThompsonSamplingBandit)
+[//]: # (from npsem.bandits import ThompsonSamplingBandit)
 
 [//]: # ()
 [//]: # (# Create a bandit problem from the SCM)
@@ -219,7 +219,7 @@ To reproduce the experiments from the NeurIPS 2025 paper:
 
 ```bash
 # Run experiments (~2 hours on 48-core server, ~4-6 hours on typical machines)
-python -m src.NIPS2025POMISPLUS_exp.test_nsbandit_strategies
+python -m npsem.NIPS2025POMISPLUS_exp.test_nsbandit_strategies
 ```
 
 This creates a `bandit_results/` directory with results for three experimental tasks:
@@ -231,7 +231,7 @@ This creates a `bandit_results/` directory with results for three experimental t
 
 ```bash
 # Generate figures as in the paper
-python -m src.NIPS2025POMISPLUS_exp.test_drawing_re
+python -m npsem.NIPS2025POMISPLUS_exp.test_drawing_re
 ```
 
 This produces:
@@ -244,7 +244,7 @@ This produces:
 To run specific tasks:
 
 ```python
-from src.NIPS2025POMISPLUS_exp import test_nsbandit_strategies
+from npsem.NIPS2025POMISPLUS_exp import test_nsbandit_strategies
 
 # Run only Task 1
 test_nsbandit_strategies.run_task(task_id=1, n_trials=100000, n_runs=200)
@@ -255,8 +255,8 @@ test_nsbandit_strategies.run_task(task_id=1, n_trials=100000, n_runs=200)
 You can customize the experimental parameters:
 
 ```python
-from src.NIPS2025POMISPLUS_exp.scm_examples import create_task1_scm
-from src.scm_bandits import run_bandit_experiment
+from npsem.NIPS2025POMISPLUS_exp.scm_examples import create_task1_scm
+from npsem.scm_bandits import run_bandit_experiment
 
 # Create custom SCM
 scm = create_task1_scm()
@@ -275,7 +275,7 @@ results = run_bandit_experiment(
 
 ```
 NS-SCMMAB/
-├── src/                               # Main package
+├── npsem/                             # Main package
 │   ├── model.py                       # Structural Causal Model implementation
 │   ├── bandits.py                     # Bandit algorithms (Thompson Sampling, KL-UCB)
 │   ├── scm_bandits.py                 # SCM-specific bandit formulations

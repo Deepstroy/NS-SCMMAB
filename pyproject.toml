@@ -57,4 +57,4 @@ Paper = "https://openreview.net/pdf?id=F4LhOqhxkk"
 "Blog Post" = "https://yeahoon-k.github.io/ns-scb-explainer/"
 
 [tool.setuptools]
-packages = ["src"]
+packages = ["npsem"]
